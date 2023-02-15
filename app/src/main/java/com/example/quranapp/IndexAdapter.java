@@ -48,6 +48,20 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            indexTitle = itemView.findViewById(R.id.verseText);
+
+
+            // handle onClick
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String st = (String) indexTitle.getText();
+
+                    Intent intent = new Intent(ctx.getApplicationContext(), DataShowActivity.class);
+                    intent.putExtra("data", st);
+                    ctx.getApplicationContext().startActivity(intent);
+                }
+            });
         }
     }
 }
