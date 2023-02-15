@@ -30,15 +30,18 @@ public class IndexActivity extends AppCompatActivity {
         String searchCategory = intent.getStringExtra("category");
 
         initializeDataInList();
+        recyclerView = findViewById(R.id.indexView);
         layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
 
         if(searchCategory.equals("p"))
         {
+            adapter = new IndexAdapter(getApplicationContext(), parahList) ;
             recyclerView.setAdapter(adapter);
         }
         else if(searchCategory.equals("s"))
         {
+            adapter = new IndexAdapter(getApplicationContext(), surrahList) ;
             recyclerView.setAdapter(adapter);
         }
     }
