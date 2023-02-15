@@ -39,8 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5sp"
                 android:layout_weight="1"
-                android:text="TextView"
-                android:textColor="@color/black" />
+                android:text="TextView" />
 
         </LinearLayout>
 
