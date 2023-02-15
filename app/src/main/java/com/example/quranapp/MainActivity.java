@@ -14,11 +14,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        DataBaseHelper databaseHelper = new DataBaseHelper(this);
+        DBHandler databaseHelper = new DBHandler(this);
         databaseHelper.createDataBase();
         databaseHelper.openDataBase();
         Cursor cursor = databaseHelper.query("SELECT * FROM QuranMetaData");
-        helloText =  findViewById(R.id.helloText);
+        //helloText =  findViewById(R.id.helloText);
         if(cursor.moveToFirst())
         {
             helloText.setText(cursor.getString(1));
