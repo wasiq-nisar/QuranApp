@@ -2,22 +2,11 @@ package com.example.quranapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -29,8 +18,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        parah = findViewById(R.id.byParrah);
-        surrah = findViewById(R.id.bySurrah);
+        parah = findViewById(R.id.parrah);
+        surrah = findViewById(R.id.surrah);
 
         parah.setOnClickListener(this);
         surrah.setOnClickListener(this);
@@ -40,11 +29,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId())
         {
-            case R.id.byParrah:
+            case R.id.parrah:
                 browseCategory = "p";
                 loadIndex();
                 break;
-            case R.id.bySurrah:
+            case R.id.surrah:
                 browseCategory = "s";
                 loadIndex();
                 break;
@@ -52,7 +41,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void loadIndex() {
+        //Starting a new Activity
         Intent intent = new Intent(getApplicationContext(), IndexActivity.class);
+        //IndexActivity.class, why .class file because JAVA code when compiled is converted into a byte code
+        //getApplicationContext() -> Gets the context of the current application running
         if(browseCategory.equals("p"))
         {
             intent.putExtra("category","p");
