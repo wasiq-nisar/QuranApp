@@ -60,6 +60,7 @@ public class IndexAdapter extends RecyclerView.Adapter<IndexAdapter.ViewHolder> 
 
                     Intent intent = new Intent(ctx.getApplicationContext(), DataShowActivity.class);
                     intent.putExtra("data", st);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     ctx.getApplicationContext().startActivity(intent);
 //                    v.getContext().startActivity(intent);
                 }

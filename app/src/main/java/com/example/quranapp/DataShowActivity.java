@@ -38,13 +38,14 @@ public class DataShowActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String line = intent.getStringExtra("data");
 
-        Log.d("op1", line);
 
         String[] arr = line.split(" ");
         if(line.contains("Para"))
         {
             isPara=true;
             no = Integer.parseInt(arr[1]);
+            Log.d("op1", String.valueOf(no));
+
             Log.d("op2", String.valueOf(no));
             try {
                 getParrahVerses(no);

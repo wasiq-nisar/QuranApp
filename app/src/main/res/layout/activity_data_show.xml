@@ -14,4 +14,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dataViewRecycler">
+
+        <RadioButton
+            android:id="@+id/Hindi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hindi" />
+
+        <RadioButton
+            android:id="@+id/Sindhi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sindhi" />
+    </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
