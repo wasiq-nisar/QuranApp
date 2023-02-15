@@ -5,12 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView parah,surrah;
+    Button parah,surrah,button1;
     String browseCategory;
 
     @Override
@@ -20,9 +22,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         parah = findViewById(R.id.parrah);
         surrah = findViewById(R.id.surrah);
+        button1 = findViewById(R.id.button1);
 
         parah.setOnClickListener(this);
         surrah.setOnClickListener(this);
+        button1.setOnClickListener(this);
+
     }
 
     @Override
@@ -36,6 +41,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.surrah:
                 browseCategory = "s";
                 loadIndex();
+                break;
+
+            case R.id.button1:
+                Log.d("exit", "Exiting");
+                finish();
                 break;
         }
     }
@@ -55,5 +65,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         startActivity(intent);
     }
+
 
 }

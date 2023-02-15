@@ -4,46 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D6F1D7"
     tools:context=".MainActivity">
+
 
     <TextView
         android:id="@+id/welcome"
-        android:layout_width="148dp"
-        android:layout_height="45dp"
-        android:text="Welcome"
-        android:textColor="#3F51B5"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="133dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="224dp"
+        android:background="#A1E4A3"
+        android:gravity="center"
+        android:text="Quran"
+        android:textColor="@color/black"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.253" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/surrah"
-        android:layout_width="150dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="188dp"
+        android:layout_width="158dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="148dp"
+        android:backgroundTint="#A1E4A3"
         android:text="Search by Surrah"
-        android:textColor="@color/teal_700"
+        android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome" />
 
-    <TextView
+    <Button
         android:id="@+id/parrah"
-        android:layout_width="150dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="188dp"
-        android:layout_marginEnd="28dp"
+        android:layout_width="156dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#A1E4A3"
         android:text="Search by Parah"
-        android:textColor="@color/teal_700"
+        android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="189dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="304dp"
+        android:text="Exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome" />
 </androidx.constraintlayout.widget.ConstraintLayout>
